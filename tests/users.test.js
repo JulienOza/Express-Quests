@@ -27,3 +27,7 @@ describe("GET /api/users/:id", () => {
     expect(response.status).toEqual(404);
   });
 });
+
+const database = require("../database");
+
+afterAll(() => database.end());

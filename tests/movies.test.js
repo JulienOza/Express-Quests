@@ -27,3 +27,7 @@ describe("GET /api/movies/:id", () => {
     expect(response.status).toEqual(404);
   });
 });
+
+const database = require("../database");
+
+afterAll(() => database.end());
