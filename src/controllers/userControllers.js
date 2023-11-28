@@ -13,7 +13,7 @@ const getUsers = (req, res) => {
 };
 
 const getUsersById = (req, res) => {
-  const id = req.params.id;
+  const id = parseInt(req.params.id);
 
   database
     .query("SELECT * FROM users WHERE id = ?", id)
